@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow DOMs</title>
+</head>
+
+<body>
+
+    <template>
+        <h1>Hello World</h1>
+    </template>
+
+    <script>
+        var template = document.querySelector('template');
+        var clone = document.importNode(template.content, true);
+        document.body.appendChild(clone);
+        console.log('My First Shadow DOM! Hurray!');
+    </script>
+
+</body>
+
+</html>
